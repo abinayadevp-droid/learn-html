@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML - Complete Guide from Basics to Advanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #ffd700;
+            --light: #f4f6f9;
+            --dark: #333;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        section {
+            padding: 5rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* HTML Sections */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .topic-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .topic-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .topic-img {
+            height: 200px;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 4rem;
+        }
+
+        .topic-content {
+            padding: 1.5rem;
+        }
+
+        .topic-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Code Examples */
+        .code-example {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+
+        .code-example code {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .tag {
+            color: #f92672;
+        }
+
+        .attribute {
+            color: #a6e22e;
+        }
+
+        .value {
+            color: #e6db74;
+        }
+
+        .comment {
+            color: #75715e;
+        }
+
+        .selector {
+            color: #a6e22e;
+        }
+
+        .property {
+            color: #66d9ef;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--secondary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 1.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid,
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.5rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Info Box Styles */
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .info-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>LearnHTML</span>
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#basics">Basics</a></li>
+                    <li><a href="#structure">Structure</a></li>
+                    <li><a href="#elements">Elements</a></li>
+                    <li><a href="#advanced">Advanced</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Master HTML</h1>
+            <p>Your complete guide to HTML from basics to advanced concepts. Learn the foundation of web development.</p>
+            <a href="#basics" class="btn">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Learn HTML?</h2>
+                <p>HTML is the backbone of every website on the internet</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Foundation of Web</h3>
+                    <p>HTML is the fundamental building block of all websites and web applications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Universal Standard</h3>
+                    <p>Supported by all browsers and devices, making it essential for web development.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Easy to Learn</h3>
+                    <p>HTML has a simple syntax that beginners can quickly grasp and start using.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Basics Section -->
+    <section id="basics" class="html-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>HTML Basics</h2>
+                <p>Understanding the fundamentals of HTML</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>What is HTML?</h3>
+                        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+                        <div class="info-box">
+                            <h4>Did You Know?</h4>
+                            <p>HTML was created by Tim Berners-Lee in 1991 and has evolved through multiple versions, with HTML5 as the current standard.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>HTML Elements</h3>
+                        <p>Elements are the building blocks of HTML, consisting of tags, attributes, and content.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;tagname</span> <span class="attribute">attribute=</span><span class="value">"value"</span><span class="tag">&gt;</span>Content<span class="tag">&lt;/tagname&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Basic Structure</h3>
+                        <p>Every HTML document follows a basic structure with essential elements.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;!DOCTYPE html&gt;</span><br>
+                                <span class="tag">&lt;html&gt;</span><br>
+                                <span class="tag">&lt;head&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span><br>
+                                <span class="tag">&lt;/head&gt;</span><br>
+                                <span class="tag">&lt;body&gt;</span><br>
+                                &nbsp;&nbsp;<span class="comment">&lt;!-- Content goes here --&gt;</span><br>
+                                <span class="tag">&lt;/body&gt;</span><br>
+                                <span class="tag">&lt;/html&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Structure Section -->
+    <section id="structure" class="html-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>HTML Document Structure</h2>
+                <p>Understanding the components of an HTML document</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-heading"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Head Section</h3>
+                        <p>The head contains meta information about the document, not displayed on the page.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;head&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="value">"stylesheet"</span> <span class="attribute">href=</span><span class="value">"styles.css"</span><span class="tag">&gt;</span><br>
+                                <span class="tag">&lt;/head&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Body Section</h3>
+                        <p>The body contains the visible content of the web page.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;body&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;header&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Website Title<span class="tag">&lt;/h1&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;nav&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Navigation links --&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/nav&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;/header&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;main&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Main content --&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;/main&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;footer&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Footer content --&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;/footer&gt;</span><br>
+                                <span class="tag">&lt;/body&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Semantic Elements</h3>
+                        <p>HTML5 introduced semantic elements that clearly define different parts of a web page.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;header&gt;</span> <span class="comment">&lt;-- Top section --&gt;</span><br>
+                                <span class="tag">&lt;nav&gt;</span> <span class="comment">&lt;-- Navigation --&gt;</span><br>
+                                <span class="tag">&lt;main&gt;</span> <span class="comment">&lt;-- Main content --&gt;</span><br>
+                                <span class="tag">&lt;section&gt;</span> <span class="comment">&lt;-- Section of content --&gt;</span><br>
+                                <span class="tag">&lt;article&gt;</span> <span class="comment">&lt;-- Self-contained content --&gt;</span><br>
+                                <span class="tag">&lt;aside&gt;</span> <span class="comment">&lt;-- Side content --&gt;</span><br>
+                                <span class="tag">&lt;footer&gt;</span> <span class="comment">&lt;-- Bottom section --&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Elements Section -->
+    <section id="elements" class="html-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>HTML Elements & Attributes</h2>
+                <p>Essential elements for creating web content</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-text-height"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Text Formatting</h3>
+                        <p>HTML provides various elements for formatting text with semantic meaning.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;h1&gt;</span>Main Heading<span class="tag">&lt;/h1&gt;</span><br>
+                                <span class="tag">&lt;p&gt;</span>Paragraph text<span class="tag">&lt;/p&gt;</span><br>
+                                <span class="tag">&lt;strong&gt;</span>Important text<span class="tag">&lt;/strong&gt;</span><br>
+                                <span class="tag">&lt;em&gt;</span>Emphasized text<span class="tag">&lt;/em&gt;</span><br>
+                                <span class="tag">&lt;a</span> <span class="attribute">href=</span><span class="value">"https://example.com"</span><span class="tag">&gt;</span>Link<span class="tag">&lt;/a&gt;</span><br>
+                                <span class="tag">&lt;img</span> <span class="attribute">src=</span><span class="value">"image.jpg"</span> <span class="attribute">alt=</span><span class="value">"Description"</span><span class="tag">&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Lists & Tables</h3>
+                        <p>Organize content with ordered, unordered lists and structured tables.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="comment">&lt;!-- Unordered List --&gt;</span><br>
+                                <span class="tag">&lt;ul&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Item 1<span class="tag">&lt;/li&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Item 2<span class="tag">&lt;/li&gt;</span><br>
+                                <span class="tag">&lt;/ul&gt;</span><br><br>
+                                <span class="comment">&lt;!-- Table --&gt;</span><br>
+                                <span class="tag">&lt;table&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Header 1<span class="tag">&lt;/th&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Header 2<span class="tag">&lt;/th&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Data 1<span class="tag">&lt;/td&gt;</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Data 2<span class="tag">&lt;/td&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
+                                <span class="tag">&lt;/table&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-window-restore"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Forms & Inputs</h3>
+                        <p>Create interactive forms to collect user input with various control types.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="tag">&lt;form</span> <span class="attribute">action=</span><span class="value">"/submit"</span> <span class="attribute">method=</span><span class="value">"post"</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;label</span> <span class="attribute">for=</span><span class="value">"name"</span><span class="tag">&gt;</span>Name:<span class="tag">&lt;/label&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"text"</span> <span class="attribute">id=</span><span class="value">"name"</span> <span class="attribute">name=</span><span class="value">"name"</span><span class="tag">&gt;</span><br><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;label</span> <span class="attribute">for=</span><span class="value">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"email"</span> <span class="attribute">id=</span><span class="value">"email"</span> <span class="attribute">name=</span><span class="value">"email"</span><span class="tag">&gt;</span><br><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"submit"</span> <span class="attribute">value=</span><span class="value">"Submit"</span><span class="tag">&gt;</span><br>
+                                <span class="tag">&lt;/form&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced HTML Section -->
+    <section id="advanced" class="html-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced HTML Concepts</h2>
+                <p>Modern HTML features and APIs</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-photo-video"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Multimedia</h3>
+                        <p>Embed audio, video, and graphics directly into your web pages.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="comment">&lt;!-- Audio --&gt;</span><br>
+                                <span class="tag">&lt;audio</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"audio.mp3"</span> <span class="attribute">type=</span><span class="value">"audio/mp3"</span><span class="tag">&gt;</span><br>
+                                <span class="tag">&lt;/audio&gt;</span><br><br>
+                                <span class="comment">&lt;!-- Video --&gt;</span><br>
+                                <span class="tag">&lt;video</span> <span class="attribute">width=</span><span class="value">"320"</span> <span class="attribute">height=</span><span class="value">"240"</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"movie.mp4"</span> <span class="attribute">type=</span><span class="value">"video/mp4"</span><span class="tag">&gt;</span><br>
+                                <span class="tag">&lt;/video&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>HTML5 APIs</h3>
+                        <p>Leverage powerful browser APIs for enhanced functionality.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="comment">&lt;!-- Geolocation API --&gt;</span><br>
+                                <span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"getLocation()"</span><span class="tag">&gt;</span>Get Location<span class="tag">&lt;/button&gt;</span><br><br>
+                                <span class="comment">&lt;!-- Web Storage --&gt;</span><br>
+                                <span class="tag">&lt;script&gt;</span><br>
+                                &nbsp;&nbsp;localStorage.setItem('name', 'John');<br>
+                                &nbsp;&nbsp;let user = localStorage.getItem('name');<br>
+                                <span class="tag">&lt;/script&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Advanced Features</h3>
+                        <p>Modern HTML features that enhance user experience and performance.</p>
+                        <div class="code-example">
+                            <code>
+                                <span class="comment">&lt;!-- Lazy loading images --&gt;</span><br>
+                                <span class="tag">&lt;img</span> <span class="attribute">src=</span><span class="value">"image.jpg"</span> <span class="attribute">loading=</span><span class="value">"lazy"</span> <span class="attribute">alt=</span><span class="value">"..."</span><span class="tag">&gt;</span><br><br>
+                                <span class="comment">&lt;!-- Contenteditable attribute --&gt;</span><br>
+                                <span class="tag">&lt;div</span> <span class="attribute">contenteditable=</span><span class="value">"true"</span><span class="tag">&gt;</span><br>
+                                &nbsp;&nbsp;Editable content<br>
+                                <span class="tag">&lt;/div&gt;</span><br><br>
+                                <span class="comment">&lt;!-- Details & Summary --&gt;</span><br>
+                                <span class="tag">&lt;details&gt;</span><br>
+                                &nbsp;&nbsp;<span class="tag">&lt;summary&gt;</span>Click to expand<span class="tag">&lt;/summary&gt;</span><br>
+                                &nbsp;&nbsp;Hidden content revealed<br>
+                                <span class="tag">&lt;/details&gt;</span>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Resources</h2>
+                <p>Additional materials to help you master HTML</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>HTML Cheat Sheet</h3>
+                    <p>Download our comprehensive HTML cheat sheet for quick reference.</p>
+                    <a href="#" class="btn">Download</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Practice Projects</h3>
+                    <p>Build real websites with our step-by-step HTML project guides.</p>
+                    <a href="#" class="btn">View Projects</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Q&A Forum</h3>
+                    <p>Get help from our community of HTML learners and experts.</p>
+                    <a href="#" class="btn">Join Forum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>LearnHTML</span>
+            </div>
+            <p>Master HTML with our interactive learning platform.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2023 LearnHTML. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+        
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close nav when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Scroll animations
+        const sections = document.querySelectorAll('section');
+        const backToTop = document.querySelector('.back-to-top');
+        
+        function checkScroll() {
+            // Section animations
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerHeight = window.innerHeight * 0.8;
+                
+                if (sectionTop < triggerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+            
+            // Back to top button
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', checkScroll);
+        
+        // Back to top functionality
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Feature card animations
+        const featureCards = document.querySelectorAll('.feature-card, .topic-card');
+        
+        function checkCardAnimations() {
+            featureCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const triggerHeight = window.innerHeight * 0.8;
+                
+                if (cardTop < triggerHeight) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check
+        checkCardAnimations();
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', checkCardAnimations);
+    </script>
+</body>
+</html>
