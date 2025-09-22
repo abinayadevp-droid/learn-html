@@ -515,8 +515,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#basics">Basics</a></li>
                     <li><a href="#structure">Structure</a></li>
-                    <li><a href="#elements">Elements</a></li>
-                    <li><a href="#advanced">Advanced</a></li>
+                    <li><a href="#Advanced">Advanced</a></li>
+                    <li><a href="#hidden">hidden</a></li>
                     <li><a href="#resources">Resources</a></li>
                 </ul>
             </nav>
@@ -545,7 +545,7 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Foundation of Web</h3>
-                    <p>HTML is the fundamental building block of all websites and web applications.</p>
+                    <p>HTML (HyperText Markup Language) is the standard markup language used to create and structure pages on the web. It tells a web browser what content exists and gives that content a hierarchical structure the browser can display and other tools</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -586,44 +586,347 @@
                         </div>
                     </div>
                 </div>
-                <div class="topic-card">
-                    <div class="topic-img">
-                        <i class="fas fa-cube"></i>
+            <!-- HTML Elements Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>HTML Elements</h3>
+                    <p>Elements are the building blocks of HTML, consisting of tags, attributes, and content. And HTML element = opening tag + content + closing tag.</p>
+                    <div class="code-example">
+                        <code>
+                            <span class="tag">&lt;tagname</span> <span class="attribute">attribute=</span><span class="value">"value"</span><span class="tag">&gt;</span>Content<span class="tag">&lt;/tagname&gt;</span>
+                        </code>
                     </div>
-                    <div class="topic-content">
-                        <h3>HTML Elements</h3>
-                        <p>Elements are the building blocks of HTML, consisting of tags, attributes, and content.</p>
-                        <div class="code-example">
-                            <code>
-                                <span class="tag">&lt;tagname</span> <span class="attribute">attribute=</span><span class="value">"value"</span><span class="tag">&gt;</span>Content<span class="tag">&lt;/tagname&gt;</span>
-                            </code>
+                </div>
+            </div>
+            
+            <!-- Headings Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-heading"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Headings (&lt;h1&gt;–&lt;h6&gt;)</h3>
+                    <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags, with &lt;h1&gt; being the most important and &lt;h6&gt; the least important.</p>
+                    <div class="code-example">
+                        <code>
+&lt;h1&gt;This is H1&lt;/h1&gt;
+&lt;h2&gt;This is H2&lt;/h2&gt;
+&lt;h3&gt;This is H3&lt;/h3&gt;
+&lt;h4&gt;This is H4&lt;/h4&gt;
+&lt;h5&gt;This is H5&lt;/h5&gt;
+&lt;h6&gt;This is H6&lt;/h6&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <h1 style="font-size: 1.8rem; margin: 5px 0;">This is H1</h1>
+                            <h2 style="font-size: 1.6rem; margin: 5px 0;">This is H2</h2>
+                            <h3 style="font-size: 1.4rem; margin: 5px 0;">This is H3</h3>
+                            <h4 style="font-size: 1.2rem; margin: 5px 0;">This is H4</h4>
+                            <h5 style="font-size: 1.1rem; margin: 5px 0;">This is H5</h5>
+                            <h6 style="font-size: 1rem; margin: 5px 0;">This is H6</h6>
                         </div>
                     </div>
                 </div>
-                <div class="topic-card">
-                    <div class="topic-img">
-                        <i class="fas fa-code"></i>
+            </div>
+            
+            <!-- Paragraph Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-paragraph"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Paragraph (&lt;p&gt;)</h3>
+                    <p>The &lt;p&gt; tag defines a paragraph of text. Browsers automatically add some margin before and after each paragraph.</p>
+                    <div class="code-example">
+                        <code>
+&lt;p&gt;This is a paragraph of text in HTML.&lt;/p&gt;
+                        </code>
                     </div>
-                    <div class="topic-content">
-                        <h3>Basic Structure</h3>
-                        <p>Every HTML document follows a basic structure with essential elements.</p>
-                        <div class="code-example">
-                            <code>
-                                <span class="tag">&lt;!DOCTYPE html&gt;</span><br>
-                                <span class="tag">&lt;html&gt;</span><br>
-                                <span class="tag">&lt;head&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span><br>
-                                <span class="tag">&lt;/head&gt;</span><br>
-                                <span class="tag">&lt;body&gt;</span><br>
-                                &nbsp;&nbsp;<span class="comment">&lt;!-- Content goes here --&gt;</span><br>
-                                <span class="tag">&lt;/body&gt;</span><br>
-                                <span class="tag">&lt;/html&gt;</span>
-                            </code>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <p>This is a paragraph of text in HTML.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Line Break & Horizontal Rule Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-grip-lines"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Line Break & Horizontal Rule (&lt;br&gt;, &lt;hr&gt;)</h3>
+                    <p>The &lt;br&gt; tag inserts a single line break, while &lt;hr&gt; defines a thematic break or horizontal rule.</p>
+                    <div class="code-example">
+                        <code>
+Hello&lt;br&gt;World
+&lt;hr&gt;
+This is after a horizontal line
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            Hello<br>World
+                            <hr style="border: none; border-top: 1px solid #ccc; margin: 10px 0;">
+                            This is after a horizontal line
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Formatting Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-bold"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Text Formatting</h3>
+                    <p>HTML provides various tags for formatting text, including bold, italic, strong, emphasis, subscript, and superscript.</p>
+                    <div class="code-example">
+                        <code>
+&lt;p&gt;&lt;b&gt;Bold&lt;/b&gt; and &lt;i&gt;Italic&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strong&lt;/strong&gt; and &lt;em&gt;Emphasis&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O and 2&lt;sup&gt;3&lt;/sup&gt;=8&lt;/p&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <p><b>Bold</b> and <i>Italic</i></p>
+                            <p><strong>Strong</strong> and <em>Emphasis</em></p>
+                            <p>Water is H<sub>2</sub>O and 2<sup>3</sup>=8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Links Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Links (&lt;a&gt;)</h3>
+                    <p>The &lt;a&gt; tag defines a hyperlink, which is used to link from one page to another. The href attribute specifies the link's destination.</p>
+                    <div class="code-example">
+                        <code>
+&lt;a href="https://www.google.com" target="_blank"&gt;Go to Google&lt;/a&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <a href="https://www.google.com" target="_blank" style="color: #3498db; text-decoration: none; background: #f0f8ff; padding: 5px 10px; border-radius: 4px; display: inline-block;">👉 Go to Google</a>
+                            <p style="margin-top: 5px; font-size: 0.9rem; color: #7f8c8d;">(clickable, opens in new tab)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Image (&lt;img&gt;)</h3>
+                    <p>The &lt;img&gt; tag is used to embed an image in an HTML page. The src attribute specifies the path to the image, and the alt attribute provides alternative text.</p>
+                    <div class="code-example">
+                        <code>
+&lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <div class="media-placeholder">
+                                🖼️ (Shows a 150x150 placeholder image)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lists Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-list"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Lists (&lt;ul&gt;, &lt;ol&gt;)</h3>
+                    <p>HTML lists allow web developers to group a set of related items. &lt;ul&gt; defines an unordered list, &lt;ol&gt; defines an ordered list.</p>
+                    <div class="code-example">
+                        <code>
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Orange&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <div style="display: flex; gap: 40px;">
+                                <div>
+                                    <ul style="margin-left: 20px;">
+                                        <li>Apple</li>
+                                        <li>Banana</li>
+                                        <li>Orange</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ol style="margin-left: 20px;">
+                                        <li>First</li>
+                                        <li>Second</li>
+                                        <li>Third</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Table Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-table"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Table</h3>
+                    <p>HTML tables allow web developers to arrange data into rows and columns. A table is defined with the &lt;table&gt; tag.</p>
+                    <div class="code-example">
+                        <code>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Abi&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Kumar&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <table class="table-output">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                                <tr>
+                                    <td>Abi</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>Kumar</td>
+                                    <td>25</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Form Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-window-restore"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Form</h3>
+                    <p>HTML forms are used to collect user input. The &lt;form&gt; element defines a form that contains interactive controls.</p>
+                    <div class="code-example">
+                        <code>
+&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <p>A simple form with:</p>
+                            <div class="form-output">
+                                <label for="name-demo">Name:</label>
+                                <input type="text" id="name-demo"><br><br>
+                                
+                                <label for="email-demo">Email:</label>
+                                <input type="email" id="email-demo"><br><br>
+                                
+                                <button type="button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Media Card -->
+            <div class="topic-card">
+                <div class="topic-img">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="topic-content">
+                    <h3>Media (&lt;video&gt; & &lt;audio&gt;)</h3>
+                    <p>HTML provides elements for embedding media content, such as video and audio, directly into web pages.</p>
+                    <div class="code-example">
+                        <code>
+&lt;video width="300" controls&gt;
+  &lt;source src="sample.mp4" type="video/mp4"&gt;
+  Your browser does not support video.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="sample.mp3" type="audio/mp3"&gt;
+  Your browser does not support audio.
+&lt;/audio&gt;
+                        </code>
+                    </div>
+                    <div class="output">
+                        <div class="output-title">Output:</div>
+                        <div class="output-content">
+                            <div class="media-output">
+                                <div class="media-placeholder">
+                                    🎥 A video player (play/pause/volume controls)
+                                </div>
+                                <div class="media-placeholder">
+                                    🎵 An audio player (play/pause/volume controls)
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- HTML Structure Section -->
@@ -636,6 +939,42 @@
             <div class="topics-grid">
                 <div class="topic-card">
                     <div class="topic-img">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Basic HTML5 Template</h3>
+                        <p>The foundation of every HTML document with essential elements and structure.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;!DOCTYPE html&gt;</span><br>
+<span class="tag">&lt;html</span> <span class="attribute">lang=</span><span class="value">"en"</span><span class="tag">&gt;</span><br>
+<span class="tag">&lt;head&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span><br>
+<span class="tag">&lt;/head&gt;</span><br>
+<span class="tag">&lt;body&gt;</span><br>
+&nbsp;&nbsp;<span class="comment">&lt;!-- Content goes here --&gt;</span><br>
+<span class="tag">&lt;/body&gt;</span><br>
+<span class="tag">&lt;/html&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Explanation:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li><strong>&lt;!DOCTYPE html&gt;</strong>: Declares the document type and HTML version (HTML5)</li>
+                                    <li><strong>&lt;html&gt;</strong>: The root element of an HTML page</li>
+                                    <li><strong>&lt;head&gt;</strong>: Contains meta information about the document</li>
+                                    <li><strong>&lt;body&gt;</strong>: Contains the visible page content</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
                         <i class="fas fa-heading"></i>
                     </div>
                     <div class="topic-content">
@@ -643,16 +982,34 @@
                         <p>The head contains meta information about the document, not displayed on the page.</p>
                         <div class="code-example">
                             <code>
-                                <span class="tag">&lt;head&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="value">"stylesheet"</span> <span class="attribute">href=</span><span class="value">"styles.css"</span><span class="tag">&gt;</span><br>
-                                <span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;head&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"viewport"</span> <span class="attribute">content=</span><span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"description"</span> <span class="attribute">content=</span><span class="value">"Free Web tutorials"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"keywords"</span> <span class="attribute">content=</span><span class="value">"HTML, CSS, JavaScript"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attribute">name=</span><span class="value">"author"</span> <span class="attribute">content=</span><span class="value">"John Doe"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="value">"stylesheet"</span> <span class="attribute">href=</span><span class="value">"styles.css"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;style&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* CSS styles */</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/style&gt;</span><br>
+<span class="tag">&lt;/head&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Key Elements:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li><strong>Meta tags</strong>: Provide metadata about the document</li>
+                                    <li><strong>Title</strong>: Sets the title shown in browser tab</li>
+                                    <li><strong>Link</strong>: Connects external resources like CSS</li>
+                                    <li><strong>Style</strong>: Contains internal CSS styles</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="topic-card">
                     <div class="topic-img">
                         <i class="fas fa-file-alt"></i>
@@ -662,24 +1019,50 @@
                         <p>The body contains the visible content of the web page.</p>
                         <div class="code-example">
                             <code>
-                                <span class="tag">&lt;body&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;header&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Website Title<span class="tag">&lt;/h1&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;nav&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Navigation links --&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/nav&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;/header&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;main&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Main content --&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;/main&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;footer&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Footer content --&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;/footer&gt;</span><br>
-                                <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;body&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;header&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Website Title<span class="tag">&lt;/h1&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;nav&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;a</span> <span class="attribute">href=</span><span class="value">"#"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;a</span> <span class="attribute">href=</span><span class="value">"#"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/a&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/nav&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/header&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;main&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;article&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span>Article Title<span class="tag">&lt;/h2&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>Article content...<span class="tag">&lt;/p&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/article&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/main&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;footer&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>&copy; 2023 My Website<span class="tag">&lt;/p&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/footer&gt;</span><br>
+<span class="tag">&lt;/body&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Visual Output:</div>
+                            <div class="example-output">
+                                <header style="background: #e3f2fd; padding: 15px; border-radius: 4px;">
+                                    <h1 style="margin: 0;">Website Title</h1>
+                                    <nav style="margin-top: 10px;">
+                                        <a href="#" style="margin-right: 15px; text-decoration: none; color: #1565c0;">Home</a>
+                                        <a href="#" style="margin-right: 15px; text-decoration: none; color: #1565c0;">About</a>
+                                    </nav>
+                                </header>
+                                <main style="padding: 15px;">
+                                    <article style="background: #f5f5f5; padding: 15px; border-radius: 4px;">
+                                        <h2 style="margin-top: 0;">Article Title</h2>
+                                        <p>Article content...</p>
+                                    </article>
+                                </main>
+                                <footer style="background: #2c3e50; color: white; padding: 10px; text-align: center; border-radius: 4px; margin-top: 15px;">
+                                    <p style="margin: 0;">© 2023 My Website</p>
+                                </footer>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="topic-card">
                     <div class="topic-img">
                         <i class="fas fa-table"></i>
@@ -689,103 +1072,133 @@
                         <p>HTML5 introduced semantic elements that clearly define different parts of a web page.</p>
                         <div class="code-example">
                             <code>
-                                <span class="tag">&lt;header&gt;</span> <span class="comment">&lt;-- Top section --&gt;</span><br>
-                                <span class="tag">&lt;nav&gt;</span> <span class="comment">&lt;-- Navigation --&gt;</span><br>
-                                <span class="tag">&lt;main&gt;</span> <span class="comment">&lt;-- Main content --&gt;</span><br>
-                                <span class="tag">&lt;section&gt;</span> <span class="comment">&lt;-- Section of content --&gt;</span><br>
-                                <span class="tag">&lt;article&gt;</span> <span class="comment">&lt;-- Self-contained content --&gt;</span><br>
-                                <span class="tag">&lt;aside&gt;</span> <span class="comment">&lt;-- Side content --&gt;</span><br>
-                                <span class="tag">&lt;footer&gt;</span> <span class="comment">&lt;-- Bottom section --&gt;</span>
+<span class="tag">&lt;header&gt;</span> <span class="comment">&lt;!-- Top section --&gt;</span><br>
+<span class="tag">&lt;nav&gt;</span> <span class="comment">&lt;!-- Navigation --&gt;</span><br>
+<span class="tag">&lt;main&gt;</span> <span class="comment">&lt;!-- Main content --&gt;</span><br>
+<span class="tag">&lt;section&gt;</span> <span class="comment">&lt;!-- Section of content --&gt;</span><br>
+<span class="tag">&lt;article&gt;</span> <span class="comment">&lt;!-- Self-contained content --&gt;</span><br>
+<span class="tag">&lt;aside&gt;</span> <span class="comment">&lt;!-- Side content --&gt;</span><br>
+<span class="tag">&lt;footer&gt;</span> <span class="comment">&lt;!-- Bottom section --&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Layout Example:</div>
+                            <div class="semantic-layout">
+                                <header>Header</header>
+                                <nav>Navigation</nav>
+                                <main>Main Content</main>
+                                <aside>Sidebar</aside>
+                                <footer>Footer</footer>
+                            </div>
+                        </div>
+                        <div class="output" style="margin-top: 15px;">
+                            <div class="output-title">Benefits:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li>Improved accessibility for screen readers</li>
+                                    <li>Better SEO (Search Engine Optimization)</li>
+                                    <li>Cleaner, more readable code</li>
+                                    <li>Easier to style and maintain</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>HTML Comments & Special Characters</h3>
+                        <p>Comments help document code, and special characters display reserved symbols.</p>
+                        <div class="code-example">
+                            <code>
+<span class="comment">&lt;!-- This is a comment --&gt;</span><br>
+<span class="comment">&lt;!-- <br>
+&nbsp;&nbsp;Multi-line comments<br>
+&nbsp;&nbsp;can span several lines<br>
+--&gt;</span><br>
+<br>
+<span class="tag">&lt;p&gt;</span>Copyright &amp;copy; 2023<span class="tag">&lt;/p&gt;</span><br>
+<span class="tag">&lt;p&gt;</span>Price: &amp;euro;10.99<span class="tag">&lt;/p&gt;</span><br>
+<span class="tag">&lt;p&gt;</span>5 &amp;gt; 3 &amp;amp; 3 &amp;lt; 5<span class="tag">&lt;/p&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Output:</div>
+                            <div class="output-content">
+                                <p>Copyright © 2023</p>
+                                <p>Price: €10.99</p>
+                                <p>5 > 3 & 3 < 5</p>
+                            </div>
+                        </div>
+                        <div class="output" style="margin-top: 15px;">
+                            <div class="output-title">Common Character Entities:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li><strong>&amp;lt;</strong> = &lt; (less than)</li>
+                                    <li><strong>&amp;gt;</strong> = &gt; (greater than)</li>
+                                    <li><strong>&amp;amp;</strong> = &amp; (ampersand)</li>
+                                    <li><strong>&amp;copy;</strong> = © (copyright)</li>
+                                    <li><strong>&amp;nbsp;</strong> = non-breaking space</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Document Object Model (DOM)</h3>
+                        <p>The DOM represents the document as a tree structure of objects.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;html&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;head&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>My Page<span class="tag">&lt;/title&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/head&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;body&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>Paragraph<span class="tag">&lt;/p&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/body&gt;</span><br>
+<span class="tag">&lt;/html&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">DOM Tree Structure:</div>
+                            <div class="output-content">
+                                <div style="font-family: monospace; line-height: 1.8;">
+                                    html<br>
+                                    ├── head<br>
+                                    │   └── title ("My Page")<br>
+                                    └── body<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;├── h1 ("Heading")<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;└── p ("Paragraph")
+                                </div>
+                            </div>
+                        </div>
+                        <div class="output" style="margin-top: 15px;">
+                            <div class="output-title">DOM Importance:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li>JavaScript can manipulate the DOM</li>
+                                    <li>Allows dynamic content updates</li>
+                                    <li>Enables event handling</li>
+                                    <li>Foundation for modern web applications</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- HTML Elements Section -->
-    <section id="elements" class="html-topics">
-        <div class="container">
-            <div class="section-header">
-                <h2>HTML Elements & Attributes</h2>
-                <p>Essential elements for creating web content</p>
-            </div>
-            <div class="topics-grid">
-                <div class="topic-card">
-                    <div class="topic-img">
-                        <i class="fas fa-text-height"></i>
-                    </div>
-                    <div class="topic-content">
-                        <h3>Text Formatting</h3>
-                        <p>HTML provides various elements for formatting text with semantic meaning.</p>
-                        <div class="code-example">
-                            <code>
-                                <span class="tag">&lt;h1&gt;</span>Main Heading<span class="tag">&lt;/h1&gt;</span><br>
-                                <span class="tag">&lt;p&gt;</span>Paragraph text<span class="tag">&lt;/p&gt;</span><br>
-                                <span class="tag">&lt;strong&gt;</span>Important text<span class="tag">&lt;/strong&gt;</span><br>
-                                <span class="tag">&lt;em&gt;</span>Emphasized text<span class="tag">&lt;/em&gt;</span><br>
-                                <span class="tag">&lt;a</span> <span class="attribute">href=</span><span class="value">"https://example.com"</span><span class="tag">&gt;</span>Link<span class="tag">&lt;/a&gt;</span><br>
-                                <span class="tag">&lt;img</span> <span class="attribute">src=</span><span class="value">"image.jpg"</span> <span class="attribute">alt=</span><span class="value">"Description"</span><span class="tag">&gt;</span>
-                            </code>
-                        </div>
-                    </div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-img">
-                        <i class="fas fa-list-ol"></i>
-                    </div>
-                    <div class="topic-content">
-                        <h3>Lists & Tables</h3>
-                        <p>Organize content with ordered, unordered lists and structured tables.</p>
-                        <div class="code-example">
-                            <code>
-                                <span class="comment">&lt;!-- Unordered List --&gt;</span><br>
-                                <span class="tag">&lt;ul&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Item 1<span class="tag">&lt;/li&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;li&gt;</span>Item 2<span class="tag">&lt;/li&gt;</span><br>
-                                <span class="tag">&lt;/ul&gt;</span><br><br>
-                                <span class="comment">&lt;!-- Table --&gt;</span><br>
-                                <span class="tag">&lt;table&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Header 1<span class="tag">&lt;/th&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th&gt;</span>Header 2<span class="tag">&lt;/th&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;tr&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Data 1<span class="tag">&lt;/td&gt;</span><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td&gt;</span>Data 2<span class="tag">&lt;/td&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;/tr&gt;</span><br>
-                                <span class="tag">&lt;/table&gt;</span>
-                            </code>
-                        </div>
-                    </div>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-img">
-                        <i class="fas fa-window-restore"></i>
-                    </div>
-                    <div class="topic-content">
-                        <h3>Forms & Inputs</h3>
-                        <p>Create interactive forms to collect user input with various control types.</p>
-                        <div class="code-example">
-                            <code>
-                                <span class="tag">&lt;form</span> <span class="attribute">action=</span><span class="value">"/submit"</span> <span class="attribute">method=</span><span class="value">"post"</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;label</span> <span class="attribute">for=</span><span class="value">"name"</span><span class="tag">&gt;</span>Name:<span class="tag">&lt;/label&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"text"</span> <span class="attribute">id=</span><span class="value">"name"</span> <span class="attribute">name=</span><span class="value">"name"</span><span class="tag">&gt;</span><br><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;label</span> <span class="attribute">for=</span><span class="value">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"email"</span> <span class="attribute">id=</span><span class="value">"email"</span> <span class="attribute">name=</span><span class="value">"email"</span><span class="tag">&gt;</span><br><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"submit"</span> <span class="attribute">value=</span><span class="value">"Submit"</span><span class="tag">&gt;</span><br>
-                                <span class="tag">&lt;/form&gt;</span>
-                            </code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advanced HTML Section -->
-    <section id="advanced" class="html-topics">
+<!-- Advanced HTML Section -->
+    <section id="Advanced" class="html-topics">
         <div class="container">
             <div class="section-header">
                 <h2>Advanced HTML Concepts</h2>
@@ -801,18 +1214,26 @@
                         <p>Embed audio, video, and graphics directly into your web pages.</p>
                         <div class="code-example">
                             <code>
-                                <span class="comment">&lt;!-- Audio --&gt;</span><br>
-                                <span class="tag">&lt;audio</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"audio.mp3"</span> <span class="attribute">type=</span><span class="value">"audio/mp3"</span><span class="tag">&gt;</span><br>
-                                <span class="tag">&lt;/audio&gt;</span><br><br>
-                                <span class="comment">&lt;!-- Video --&gt;</span><br>
-                                <span class="tag">&lt;video</span> <span class="attribute">width=</span><span class="value">"320"</span> <span class="attribute">height=</span><span class="value">"240"</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"movie.mp4"</span> <span class="attribute">type=</span><span class="value">"video/mp4"</span><span class="tag">&gt;</span><br>
-                                <span class="tag">&lt;/video&gt;</span>
+<span class="comment">&lt;!-- Audio --&gt;</span><br>
+<span class="tag">&lt;audio</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"audio.mp3"</span> <span class="attribute">type=</span><span class="value">"audio/mp3"</span><span class="tag">&gt;</span><br>
+<span class="tag">&lt;/audio&gt;</span><br><br>
+<span class="comment">&lt;!-- Video --&gt;</span><br>
+<span class="tag">&lt;video</span> <span class="attribute">width=</span><span class="value">"320"</span> <span class="attribute">height=</span><span class="value">"240"</span> <span class="attribute">controls</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="attribute">src=</span><span class="value">"movie.mp4"</span> <span class="attribute">type=</span><span class="value">"video/mp4"</span><span class="tag">&gt;</span><br>
+<span class="tag">&lt;/video&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Output:</div>
+                            <div class="output-content">
+                                <p><strong>Audio Player:</strong> 🎵 Shows play/pause controls for audio files</p>
+                                <p><strong>Video Player:</strong> 🎥 Shows video with play/pause/volume controls</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="topic-card">
                     <div class="topic-img">
                         <i class="fas fa-bolt"></i>
@@ -822,17 +1243,54 @@
                         <p>Leverage powerful browser APIs for enhanced functionality.</p>
                         <div class="code-example">
                             <code>
-                                <span class="comment">&lt;!-- Geolocation API --&gt;</span><br>
-                                <span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"getLocation()"</span><span class="tag">&gt;</span>Get Location<span class="tag">&lt;/button&gt;</span><br><br>
-                                <span class="comment">&lt;!-- Web Storage --&gt;</span><br>
-                                <span class="tag">&lt;script&gt;</span><br>
-                                &nbsp;&nbsp;localStorage.setItem('name', 'John');<br>
-                                &nbsp;&nbsp;let user = localStorage.getItem('name');<br>
-                                <span class="tag">&lt;/script&gt;</span>
+<span class="comment">&lt;!-- Geolocation API --&gt;</span><br>
+<span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"getLocation()"</span><span class="tag">&gt;</span>Get Location<span class="tag">&lt;/button&gt;</span><br>
+<span class="tag">&lt;p</span> <span class="attribute">id=</span><span class="value">"demo"</span><span class="tag">&gt;</span><span class="tag">&lt;/p&gt;</span><br><br>
+<span class="tag">&lt;script&gt;</span><br>
+function getLocation() {<br>
+&nbsp;&nbsp;if(navigator.geolocation){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;navigator.geolocation.getCurrentPosition(function(position){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerText =<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Latitude: " + position.coords.latitude +<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", Longitude: " + position.coords.longitude;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerText = "Geolocation not supported";<br>
+&nbsp;&nbsp;}<br>
+}<br>
+<span class="tag">&lt;/script&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Demo:</div>
+                            <button class="demo-button" onclick="getLocation()">Show My Location</button>
+                            <div id="demo" class="demo-output">Click the button to see your location</div>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Local Storage Example:</div>
+                            <div class="code-example">
+                                <code>
+<span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"saveData()"</span><span class="tag">&gt;</span>Save Name<span class="tag">&lt;/button&gt;</span><br>
+<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"text"</span> <span class="attribute">id=</span><span class="value">"username"</span><span class="tag">&gt;</span><br>
+<span class="tag">&lt;p</span> <span class="attribute">id=</span><span class="value">"showName"</span><span class="tag">&gt;</span><span class="tag">&lt;/p&gt;</span><br><br>
+<span class="tag">&lt;script&gt;</span><br>
+function saveData(){<br>
+&nbsp;&nbsp;let name = document.getElementById('username').value;<br>
+&nbsp;&nbsp;localStorage.setItem('name', name);<br>
+&nbsp;&nbsp;document.getElementById('showName').innerText = "Saved Name: " + name;<br>
+}<br>
+<span class="tag">&lt;/script&gt;</span>
+                                </code>
+                            </div>
+                            <div class="output-content">
+                                <input type="text" id="username" placeholder="Enter your name">
+                                <button class="demo-button" onclick="saveData()">Save Name</button>
+                                <div id="showName" class="demo-output"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="topic-card">
                     <div class="topic-img">
                         <i class="fas fa-magic"></i>
@@ -842,18 +1300,251 @@
                         <p>Modern HTML features that enhance user experience and performance.</p>
                         <div class="code-example">
                             <code>
-                                <span class="comment">&lt;!-- Lazy loading images --&gt;</span><br>
-                                <span class="tag">&lt;img</span> <span class="attribute">src=</span><span class="value">"image.jpg"</span> <span class="attribute">loading=</span><span class="value">"lazy"</span> <span class="attribute">alt=</span><span class="value">"..."</span><span class="tag">&gt;</span><br><br>
-                                <span class="comment">&lt;!-- Contenteditable attribute --&gt;</span><br>
-                                <span class="tag">&lt;div</span> <span class="attribute">contenteditable=</span><span class="value">"true"</span><span class="tag">&gt;</span><br>
-                                &nbsp;&nbsp;Editable content<br>
-                                <span class="tag">&lt;/div&gt;</span><br><br>
-                                <span class="comment">&lt;!-- Details & Summary --&gt;</span><br>
-                                <span class="tag">&lt;details&gt;</span><br>
-                                &nbsp;&nbsp;<span class="tag">&lt;summary&gt;</span>Click to expand<span class="tag">&lt;/summary&gt;</span><br>
-                                &nbsp;&nbsp;Hidden content revealed<br>
-                                <span class="tag">&lt;/details&gt;</span>
+<span class="comment">&lt;!-- Lazy loading images --&gt;</span><br>
+<span class="tag">&lt;img</span> <span class="attribute">src=</span><span class="value">"image.jpg"</span> <span class="attribute">loading=</span><span class="value">"lazy"</span> <span class="attribute">alt=</span><span class="value">"..."</span><span class="tag">&gt;</span><br><br>
+<span class="comment">&lt;!-- Contenteditable attribute --&gt;</span><br>
+<span class="tag">&lt;div</span> <span class="attribute">contenteditable=</span><span class="value">"true"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;Editable content<br>
+<span class="tag">&lt;/div&gt;</span><br><br>
+<span class="comment">&lt;!-- Details & Summary --&gt;</span><br>
+<span class="tag">&lt;details&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;summary&gt;</span>Click to expand<span class="tag">&lt;/summary&gt;</span><br>
+&nbsp;&nbsp;Hidden content revealed<br>
+<span class="tag">&lt;/details&gt;</span>
                             </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Demo:</div>
+                            <div class="output-content">
+                                <p><strong>Contenteditable:</strong></p>
+                                <div class="editable-demo" contenteditable="true">
+                                    Click here to edit this text!
+                                </div>
+                                
+                                <p><strong>Details & Summary:</strong></p>
+                                <div class="details-demo">
+                                    <details>
+                                        <summary>Click to expand</summary>
+                                        <p>Hidden content revealed! This is a native HTML accordion without JavaScript.</p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>HTML Entities</h3>
+                        <p>Special characters can be added using entities for reserved symbols.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;p&gt;</span>Less than: &amp;lt;, Greater than: &amp;gt;, Copyright: &amp;copy;<span class="tag">&lt;/p&gt;</span><br>
+<span class="tag">&lt;p&gt;</span>Ampersand: &amp;amp;, Euro: &amp;euro;, Trademark: &amp;trade;<span class="tag">&lt;/p&gt;</span><br>
+<span class="tag">&lt;p&gt;</span>Non-breaking&nbsp;space&nbsp;example<span class="tag">&lt;/p&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Output:</div>
+                            <div class="output-content">
+                                <p>Less than: &lt;, Greater than: &gt;, Copyright: &copy;</p>
+                                <p>Ampersand: &amp;, Euro: &euro;, Trademark: &trade;</p>
+                                <p>Non-breaking&nbsp;space&nbsp;example (spaces won't break)</p>
+                            </div>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Common Entities:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li><strong>&amp;lt;</strong> = &lt; (less than)</li>
+                                    <li><strong>&amp;gt;</strong> = &gt; (greater than)</li>
+                                    <li><strong>&amp;amp;</strong> = &amp; (ampersand)</li>
+                                    <li><strong>&amp;copy;</strong> = &copy; (copyright)</li>
+                                    <li><strong>&amp;nbsp;</strong> = non-breaking space</li>
+                                    <li><strong>&amp;quot;</strong> = " (quotation mark)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Iframes</h3>
+                        <p>Embed another webpage or content within your page.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;iframe</span> <span class="attribute">src=</span><span class="value">"https://www.example.com"</span> <span class="attribute">width=</span><span class="value">"400"</span> <span class="attribute">height=</span><span class="value">"300"</span><span class="tag">&gt;</span><span class="tag">&lt;/iframe&gt;</span><br><br>
+<span class="comment">&lt;!-- YouTube video embed --&gt;</span><br>
+<span class="tag">&lt;iframe</span> <span class="attribute">width=</span><span class="value">"560"</span> <span class="attribute">height=</span><span class="value">"315"</span> <br>
+<span class="attribute">src=</span><span class="value">"https://www.youtube.com/embed/dQw4w9WgXcQ"</span><br>
+<span class="attribute">title=</span><span class="value">"YouTube video player"</span> <span class="attribute">frameborder=</span><span class="value">"0"</span><br>
+<span class="attribute">allow=</span><span class="value">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span><br>
+<span class="attribute">allowfullscreen</span><span class="tag">&gt;</span><span class="tag">&lt;/iframe&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Demo:</div>
+                            <div class="output-content">
+                                <p><strong>Embedded Content:</strong></p>
+                                <iframe class="iframe-demo" srcdoc="<h1>Embedded Content</h1><p>This is an example of embedded HTML content using iframe.</p>" title="Example Iframe"></iframe>
+                                <p>✅ Output: Embedded website or content in your page.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Canvas & SVG (Graphics)</h3>
+                        <p>Create dynamic graphics and vector images directly in HTML.</p>
+                        <div class="code-example">
+                            <code>
+<span class="comment">&lt;!-- Canvas --&gt;</span><br>
+<span class="tag">&lt;canvas</span> <span class="attribute">id=</span><span class="value">"myCanvas"</span> <span class="attribute">width=</span><span class="value">"200"</span> <span class="attribute">height=</span><span class="value">"100"</span><span class="tag">&gt;</span><span class="tag">&lt;/canvas&gt;</span><br>
+<span class="tag">&lt;script&gt;</span><br>
+var c = document.getElementById("myCanvas");<br>
+var ctx = c.getContext("2d");<br>
+ctx.fillStyle = "red";<br>
+ctx.fillRect(20, 20, 150, 50);<br>
+<span class="tag">&lt;/script&gt;</span><br><br>
+<span class="comment">&lt;!-- SVG --&gt;</span><br>
+<span class="tag">&lt;svg</span> <span class="attribute">width=</span><span class="value">"100"</span> <span class="attribute">height=</span><span class="value">"100"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;circle</span> <span class="attribute">cx=</span><span class="value">"50"</span> <span class="attribute">cy=</span><span class="value">"50"</span> <span class="attribute">r=</span><span class="value">"40"</span> <span class="attribute">stroke=</span><span class="value">"green"</span> <span class="attribute">stroke-width=</span><span class="value">"4"</span> <span class="attribute">fill=</span><span class="value">"yellow"</span> <span class="tag">/&gt;</span><br>
+<span class="tag">&lt;/svg&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Demo:</div>
+                            <div class="output-content">
+                                <p><strong>Canvas:</strong></p>
+                                <canvas id="myCanvas" class="canvas-demo" width="200" height="100"></canvas>
+                                
+                                <p><strong>SVG:</strong></p>
+                                <svg class="svg-demo" width="200" height="200">
+                                    <circle cx="100" cy="100" r="80" stroke="green" stroke-width="4" fill="yellow" />
+                                    <text x="100" y="110" text-anchor="middle" fill="black">SVG Circle</text>
+                                </svg>
+                                
+                                <p>✅ Output: Canvas creates bitmap graphics, SVG creates scalable vector graphics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hidden HTML Concepts Section -->
+    <section id="hidden" class="html-topics" style="margin-top: 60px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hidden HTML Concepts</h2>
+                <p>Lesser-known but powerful HTML features</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Data Attributes</h3>
+                        <p>Store custom data private to the page or application.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;div</span> <span class="attribute">id=</span><span class="value">"user"</span> <span class="attribute">data-user-id=</span><span class="value">"12345"</span> <span class="attribute">data-role=</span><span class="value">"admin"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;User Information<br>
+<span class="tag">&lt;/div&gt;</span><br><br>
+<span class="tag">&lt;script&gt;</span><br>
+var userDiv = document.getElementById('user');<br>
+console.log(userDiv.dataset.userId); // "12345"<br>
+console.log(userDiv.dataset.role); // "admin"<br>
+<span class="tag">&lt;/script&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Benefits:</div>
+                            <div class="output-content">
+                                <ul>
+                                    <li>Store extra information without affecting presentation</li>
+                                    <li>Accessible via JavaScript using the dataset property</li>
+                                    <li>Valid HTML5 that doesn't break validation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Template Element</h3>
+                        <p>Store HTML content that won't be rendered immediately but can be used later.</p>
+                        <div class="code-example">
+                            <code>
+<span class="tag">&lt;template</span> <span class="attribute">id=</span><span class="value">"myTemplate"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;div</span> <span class="attribute">class=</span><span class="value">"user-card"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h3&gt;</span>User Name<span class="tag">&lt;/h3&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>User description<span class="tag">&lt;/p&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;/div&gt;</span><br>
+<span class="tag">&lt;/template&gt;</span><br><br>
+<span class="tag">&lt;script&gt;</span><br>
+var template = document.getElementById('myTemplate');<br>
+var clone = template.content.cloneNode(true);<br>
+document.body.appendChild(clone);<br>
+<span class="tag">&lt;/script&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Usage:</div>
+                            <div class="output-content">
+                                <p>The template content is not rendered until it's activated with JavaScript. Perfect for reusable components.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-img">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="topic-content">
+                        <h3>Search & Dialog Elements</h3>
+                        <p>Specialized elements for search functionality and modal dialogs.</p>
+                        <div class="code-example">
+                            <code>
+<span class="comment">&lt;!-- Search input --&gt;</span><br>
+<span class="tag">&lt;input</span> <span class="attribute">type=</span><span class="value">"search"</span> <span class="attribute">placeholder=</span><span class="value">"Search..."</span><span class="tag">&gt;</span><br><br>
+<span class="comment">&lt;!-- Dialog element --&gt;</span><br>
+<span class="tag">&lt;dialog</span> <span class="attribute">id=</span><span class="value">"myDialog"</span><span class="tag">&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>This is a native dialog!<span class="tag">&lt;/p&gt;</span><br>
+&nbsp;&nbsp;<span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"document.getElementById('myDialog').close()"</span><span class="tag">&gt;</span>Close<span class="tag">&lt;/button&gt;</span><br>
+<span class="tag">&lt;/dialog&gt;</span><br>
+<span class="tag">&lt;button</span> <span class="attribute">onclick=</span><span class="value">"document.getElementById('myDialog').showModal()"</span><span class="tag">&gt;</span>Open Dialog<span class="tag">&lt;/button&gt;</span>
+                            </code>
+                        </div>
+                        <div class="output">
+                            <div class="output-title">Demo:</div>
+                            <div class="output-content">
+                                <input type="search" placeholder="Search..." style="padding: 8px; width: 100%; margin: 10px 0;">
+                                <button class="demo-button" onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+                                
+                                <dialog id="myDialog">
+                                    <p>This is a native HTML dialog!</p>
+                                    <button class="demo-button" onclick="document.getElementById('myDialog').close()">Close</button>
+                                </dialog>
+                            </div>
                         </div>
                     </div>
                 </div>
